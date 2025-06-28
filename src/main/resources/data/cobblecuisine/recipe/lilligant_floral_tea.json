@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:water_bucket"
+    },
+    {
+      "tag": "cobblemon:dry_10"
+    },
+    {
+      "item": "cobblecuisine:green_bean"
+    },
+    {
+      "tag": "minecraft:flowers"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:lilligant_floral_tea",
+    "count": 1
+  }
+}

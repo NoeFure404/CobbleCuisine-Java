@@ -1,0 +1,117 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/crop",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "cobblecuisine:block/bean_crop_stage6",
+		"particle": "cobblecuisine:block/bean_crop_stage6"
+	},
+	"elements": [
+		{
+			"name": "beanstalk",
+			"from": [6.25, 6.25, 5.25],
+			"to": [10.75, 11.75, 9.75],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 3, 7]},
+			"faces": {
+				"north": {"uv": [4, 0, 6, 2.5], "texture": "#0"},
+				"east": {"uv": [4, 2.5, 6, 5], "texture": "#0"},
+				"south": {"uv": [0, 5, 2, 7.5], "texture": "#0"},
+				"west": {"uv": [2, 5, 4, 7.5], "texture": "#0"},
+				"up": {"uv": [6, 7, 4, 5], "texture": "#0"},
+				"down": {"uv": [8, 0, 6, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [2.22, 3.22, 5.22],
+			"to": [6.78, 8.78, 9.78],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [4, 0, 7]},
+			"faces": {
+				"north": {"uv": [4, 0, 6, 2.5], "texture": "#0"},
+				"east": {"uv": [4, 2.5, 6, 5], "texture": "#0"},
+				"south": {"uv": [0, 5, 2, 7.5], "texture": "#0"},
+				"west": {"uv": [2, 5, 4, 7.5], "texture": "#0"},
+				"up": {"uv": [6, 7, 4, 5], "texture": "#0"},
+				"down": {"uv": [8, 0, 6, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [4.205, -0.795, 5.205],
+			"to": [8.795, 3.795, 9.795],
+			"rotation": {"angle": 0, "axis": "z", "origin": [4, -4, 7]},
+			"faces": {
+				"north": {"uv": [6, 2, 8, 4], "texture": "#0"},
+				"east": {"uv": [6, 4, 8, 6], "texture": "#0"},
+				"south": {"uv": [6, 6, 8, 8], "texture": "#0"},
+				"west": {"uv": [4, 7, 6, 9], "texture": "#0"},
+				"up": {"uv": [2, 9.5, 0, 7.5], "texture": "#0"},
+				"down": {"uv": [4, 7.5, 2, 9.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [2.5, 9.5, 5.5],
+			"to": [6.5, 16.5, 9.5],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [4, 8, 7]},
+			"faces": {
+				"north": {"uv": [8, 0, 9.5, 3], "texture": "#0"},
+				"east": {"uv": [8, 3, 9.5, 6], "texture": "#0"},
+				"south": {"uv": [6, 8, 7.5, 11], "texture": "#0"},
+				"west": {"uv": [8, 6, 9.5, 9], "texture": "#0"},
+				"up": {"uv": [3.5, 3.5, 2, 2], "texture": "#0"},
+				"down": {"uv": [5.5, 9, 4, 10.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [6.8, 13.8, 5.8],
+			"to": [10.2, 18.2, 9.2],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [7, 12, 7]},
+			"faces": {
+				"north": {"uv": [0.5, 3, 1, 4], "texture": "#0"},
+				"east": {"uv": [0, 3, 0.5, 4], "texture": "#0"},
+				"south": {"uv": [1.5, 3, 2, 4], "texture": "#0"},
+				"west": {"uv": [1, 3, 1.5, 4], "texture": "#0"},
+				"up": {"uv": [1, 3, 0.5, 2.5], "texture": "#0"},
+				"down": {"uv": [1.5, 2.5, 1, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [4.4, 15.4, 6.4],
+			"to": [6.6, 20.6, 8.6],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [9, 15, 7]},
+			"faces": {
+				"north": {"uv": [2.5, 4, 3, 5], "texture": "#0"},
+				"east": {"uv": [2, 4, 2.5, 5], "texture": "#0"},
+				"south": {"uv": [3.5, 4, 4, 5], "texture": "#0"},
+				"west": {"uv": [3, 4, 3.5, 5], "texture": "#0"},
+				"up": {"uv": [3, 4, 2.5, 3.5], "texture": "#0"},
+				"down": {"uv": [3.5, 3.5, 3, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "beanstalk",
+			"from": [7.9, 22.9, 6.9],
+			"to": [9.1, 29.1, 8.1],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [12, 20, 7]},
+			"faces": {
+				"north": {"uv": [2.5, 0.5, 3, 2], "texture": "#0"},
+				"east": {"uv": [2, 0.5, 2.5, 2], "texture": "#0"},
+				"south": {"uv": [3.5, 0.5, 4, 2], "texture": "#0"},
+				"west": {"uv": [3, 0.5, 3.5, 2], "texture": "#0"},
+				"up": {"uv": [3, 0.5, 2.5, 0], "texture": "#0"},
+				"down": {"uv": [3.5, 0, 3, 0.5], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "bean_crop_stage6",
+			"origin": [7, 3, 7],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6]
+		}
+	]
+}

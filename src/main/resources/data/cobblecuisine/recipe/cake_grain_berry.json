@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "tag": "cobblecuisine:group1"
+    },
+    {
+      "tag": "cobblecuisine:group1"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:berry_grain_cake",
+    "count": 1
+  }
+}

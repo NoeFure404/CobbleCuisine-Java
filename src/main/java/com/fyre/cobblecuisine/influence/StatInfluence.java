@@ -1,0 +1,91 @@
+package com.fyre.cobblecuisine.influence;
+
+import com.cobblemon.mod.common.api.pokemon.stats.Stat;
+import com.cobblemon.mod.common.api.pokemon.stats.Stats;
+import com.cobblemon.mod.common.api.spawning.SpawnBucket;
+import com.cobblemon.mod.common.api.spawning.context.SpawningContext;
+import com.cobblemon.mod.common.api.spawning.context.calculators.SpawningContextCalculator;
+import com.cobblemon.mod.common.api.spawning.detail.SpawnAction;
+import com.cobblemon.mod.common.api.spawning.detail.SpawnDetail;
+import com.cobblemon.mod.common.api.spawning.influence.SpawningInfluence;
+import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
+
+import com.fyre.cobblecuisine.config.CobbleCuisineConfig;
+import com.fyre.cobblecuisine.effect.CobbleCuisineEffects;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+
+import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.ThreadLocalRandom;
+
+import static com.fyre.cobblecuisine.CobbleCuisine.LOGGER;
+import static com.fyre.cobblecuisine.CobbleCuisine.DEBUG;
+
+public class StatInfluence implements SpawningInfluence {
+
+	private static final RegistryEntry<StatusEffect> IV_MODIFY_EFFECT = CobbleCuisineEffects.IV_MODIFY.entry;
+
+	private static final Stat[] ALL_STATS = new Stat[] {
+			Stats.HP,
+			Stats.ATTACK,
+			Stats.DEFENCE,
+			Stats.SPECIAL_ATTACK,
+			Stats.SPECIAL_DEFENCE,
+			Stats.SPEED
+	};
+
+	private static final float IV_MIN = CobbleCuisineConfig.data.boostSettings.ivMinChance;
+	private static final float IV_MAX = CobbleCuisineConfig.data.boostSettings.ivMaxChance;
+	private static final float IV_AVG = CobbleCuisineConfig.data.boostSettings.ivAvgChance;
+
+	private static final double EFFECT_DISTANCE = Math.pow(CobbleCuisineConfig.data.boostSettings.effectDistanceBlocks, 2);
+
+	private final ServerPlayerEntity player;
+	public StatInfluence(ServerPlayerEntity player) { this.player = player; }
+
+	@Override
+	public void affectSpawn(@NotNull Entity entity) {
+		if (!player.hasStatusEffect(IV_MODIFY_EFFECT)) return;
+		if (!(entity instanceof PokemonEntity pokemonEntity) || pokemonEntity.getPokemon().isPlayerOwned()) return;
+
+		if (player.getBlockPos().getSquaredDistance(entity.getBlockPos()) > EFFECT_DISTANCE) return;
+
+		double random = ThreadLocalRandom.current().nextDouble();
+		if (random < IV_MAX) {
+			setIVs(pokemonEntity, 25, 32, false);
+		} else if (random < IV_AVG) {
+			setIVs(pokemonEntity, 20, 31, false);
+		} else if (random < IV_MIN) {
+			setIVs(pokemonEntity, 15, 26, true);
+		} else {
+			setIVs(pokemonEntity, 10, 21, true);
+		}
+
+		if (DEBUG) LOGGER.info("CobbleCuisine >> STAT INFLUENCE >> PLAYER: {} PKM: {} IVS: {}", player.getName(), pokemonEntity.getName(), pokemonEntity.getPokemon().getIvs());
+	}
+
+	private void setIVs(PokemonEntity pokemon, int min, int max, boolean individual) {
+		if (individual) {
+			for (Stat stat : ALL_STATS) {
+				pokemon.getPokemon().setIV(stat, ThreadLocalRandom.current().nextInt(min, max));
+			}
+		}
+		int val = ThreadLocalRandom.current().nextInt(min, max);
+		for (Stat stat : ALL_STATS) {
+			pokemon.getPokemon().setIV(stat, val);
+		}
+	}
+
+	@Override public boolean isExpired() { return false; }
+	@Override public void affectAction(@NotNull SpawnAction<?> action) { }
+	@Override public float affectBucketWeight(@NotNull SpawnBucket bucket, float weight) { return weight; }
+	@Override public boolean isAllowedPosition(@NotNull ServerWorld world, @NotNull BlockPos pos, @NotNull SpawningContextCalculator<?, ?> contextCalculator) { return true; }
+	@Override public boolean affectSpawnable(@NotNull SpawnDetail detail, @NotNull SpawningContext ctx) { return true; }
+	@Override public float affectWeight(@NotNull SpawnDetail detail, @NotNull SpawningContext ctx, float weight) { return weight; }
+}

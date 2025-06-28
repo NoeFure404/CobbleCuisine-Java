@@ -1,0 +1,153 @@
+package com.fyre.cobblecuisine.influence;
+
+import com.cobblemon.mod.common.api.spawning.SpawnBucket;
+import com.cobblemon.mod.common.api.spawning.context.SpawningContext;
+import com.cobblemon.mod.common.api.spawning.context.calculators.SpawningContextCalculator;
+import com.cobblemon.mod.common.api.spawning.detail.PokemonSpawnDetail;
+import com.cobblemon.mod.common.api.spawning.detail.SpawnAction;
+import com.cobblemon.mod.common.api.spawning.detail.SpawnDetail;
+import com.cobblemon.mod.common.api.spawning.influence.SpawningInfluence;
+import com.cobblemon.mod.common.api.types.ElementalType;
+import com.cobblemon.mod.common.api.types.ElementalTypes;
+import com.cobblemon.mod.common.pokemon.Species;
+
+import com.fyre.cobblecuisine.config.CobbleCuisineConfig;
+import com.fyre.cobblecuisine.effect.CobbleCuisineEffects;
+import com.fyre.cobblecuisine.util.CobbleCuisineUtils;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.BlockPos;
+
+import org.jetbrains.annotations.NotNull;
+
+import static com.fyre.cobblecuisine.CobbleCuisine.LOGGER;
+import static com.fyre.cobblecuisine.CobbleCuisine.DEBUG;
+
+public class TypeInfluence implements SpawningInfluence {
+
+	private static final ElementalType[] TYPE_ORDER = new ElementalType[]{
+			ElementalTypes.INSTANCE.getNORMAL(),
+			ElementalTypes.INSTANCE.getFIRE(),
+			ElementalTypes.INSTANCE.getWATER(),
+			ElementalTypes.INSTANCE.getELECTRIC(),
+			ElementalTypes.INSTANCE.getGRASS(),
+			ElementalTypes.INSTANCE.getICE(),
+			ElementalTypes.INSTANCE.getFIGHTING(),
+			ElementalTypes.INSTANCE.getPOISON(),
+			ElementalTypes.INSTANCE.getGROUND(),
+			ElementalTypes.INSTANCE.getFLYING(),
+			ElementalTypes.INSTANCE.getPSYCHIC(),
+			ElementalTypes.INSTANCE.getBUG(),
+			ElementalTypes.INSTANCE.getROCK(),
+			ElementalTypes.INSTANCE.getGHOST(),
+			ElementalTypes.INSTANCE.getDRAGON(),
+			ElementalTypes.INSTANCE.getDARK(),
+			ElementalTypes.INSTANCE.getSTEEL(),
+			ElementalTypes.INSTANCE.getFAIRY()
+	};
+
+	@SuppressWarnings("unchecked")
+	private static final RegistryEntry<StatusEffect>[] STATUS_EFFECTS = new RegistryEntry[]{
+			CobbleCuisineEffects.NORMAL.entry,
+			CobbleCuisineEffects.FIRE.entry,
+			CobbleCuisineEffects.WATER.entry,
+			CobbleCuisineEffects.ELECTRIC.entry,
+			CobbleCuisineEffects.GRASS.entry,
+			CobbleCuisineEffects.ICE.entry,
+			CobbleCuisineEffects.FIGHTING.entry,
+			CobbleCuisineEffects.POISON.entry,
+			CobbleCuisineEffects.GROUND.entry,
+			CobbleCuisineEffects.FLYING.entry,
+			CobbleCuisineEffects.PSYCHIC.entry,
+			CobbleCuisineEffects.BUG.entry,
+			CobbleCuisineEffects.ROCK.entry,
+			CobbleCuisineEffects.GHOST.entry,
+			CobbleCuisineEffects.DRAGON.entry,
+			CobbleCuisineEffects.DARK.entry,
+			CobbleCuisineEffects.STEEL.entry,
+			CobbleCuisineEffects.FAIRY.entry
+	};
+
+	private static final float[] MATCH_MULTIPLIERS = {
+			CobbleCuisineConfig.data.typeMultipliers.normal.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fire.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.water.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.electric.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.grass.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ice.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fighting.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.poison.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ground.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.flying.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.psychic.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.bug.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.rock.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ghost.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.dragon.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.dark.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.steel.weightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fairy.weightMultiplier
+	};
+
+	private static final float[] NON_MATCH_MULTIPLIERS = {
+			CobbleCuisineConfig.data.typeMultipliers.normal.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fire.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.water.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.electric.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.grass.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ice.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fighting.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.poison.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ground.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.flying.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.psychic.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.bug.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.rock.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.ghost.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.dragon.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.dark.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.steel.nonWeightMultiplier,
+			CobbleCuisineConfig.data.typeMultipliers.fairy.nonWeightMultiplier
+	};
+
+	private static final double EFFECT_DISTANCE = Math.pow(CobbleCuisineConfig.data.boostSettings.effectDistanceBlocks, 2);
+
+	private final ServerPlayerEntity player;
+	public TypeInfluence(ServerPlayerEntity player) { this.player = player; }
+
+	@Override
+	public float affectWeight(@NotNull SpawnDetail detail, @NotNull SpawningContext ctx, float weight) {
+		if (!player.hasStatusEffect(CobbleCuisineEffects.TYPE_BUFF_MARKER.entry)) return weight;
+		if (!(detail instanceof PokemonSpawnDetail pkm)) return weight;
+
+		Species species = CobbleCuisineUtils.resolveSpecies(pkm);
+		if (species == null) return weight;
+
+		if (player.getBlockPos().getSquaredDistance(ctx.getPosition()) > EFFECT_DISTANCE) return weight;
+
+		ElementalType primary = species.getPrimaryType();
+		ElementalType secondary = species.getSecondaryType() != null ? species.getSecondaryType() : null;
+
+		float result = weight;
+		for (int i = 0; i < STATUS_EFFECTS.length; i++) {
+			if (player.hasStatusEffect(STATUS_EFFECTS[i])) {
+				boolean matches = (TYPE_ORDER[i] == primary) || (secondary != null && TYPE_ORDER[i] == secondary);
+				result *= matches ? MATCH_MULTIPLIERS[i] : NON_MATCH_MULTIPLIERS[i];
+
+				if (DEBUG) LOGGER.info("CobbleCuisine >> TYPE INFLUENCE >> PLAYER: {} PKM: {} OLD WEIGHT: {} NEW WEIGHT: {}", player.getName(), species, weight, result);
+			}
+		}
+		return result;
+	}
+
+	@Override public boolean isExpired() { return false; }
+	@Override public void affectAction(@NotNull SpawnAction<?> action) { }
+	@Override public void affectSpawn(@NotNull Entity entity) { }
+	@Override public float affectBucketWeight(@NotNull SpawnBucket bucket, float weight) { return weight; }
+	@Override public boolean isAllowedPosition(@NotNull ServerWorld world, @NotNull BlockPos pos, @NotNull SpawningContextCalculator<?, ?> contextCalculator) { return true; }
+	@Override public boolean affectSpawnable(@NotNull SpawnDetail detail, @NotNull SpawningContext ctx) { return true; }
+}

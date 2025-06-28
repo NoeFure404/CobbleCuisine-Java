@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "cobblemon:sour_10"
+    },
+    {
+      "item": "cobblecuisine:blue_bean"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:lemon_soda",
+    "count": 1
+  }
+}

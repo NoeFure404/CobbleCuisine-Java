@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredient": {
+    "item": "cobblemon:sitrus_berry"
+  },
+  "result": {
+    "id": "cobblecuisine:roasted_sitrus_berry"
+  },
+  "experience": 20,
+  "cookingtime": 100
+}

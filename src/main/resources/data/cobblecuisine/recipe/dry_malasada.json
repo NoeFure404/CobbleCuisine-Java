@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "cobblemon:dry_30"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "cobblemon:silver_powder"
+    },
+    {
+      "item": "cobblecuisine:blue_bean"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:dry_malasada",
+    "count": 1
+  }
+}

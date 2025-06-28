@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+      "layer0": "cobblecuisine:item/hoennian_melon_stir_fry"
+    }
+  }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "cobblemon:sour_30"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "item": "cobblecuisine:green_bean"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:sour_malasada",
+    "count": 1
+  }
+}

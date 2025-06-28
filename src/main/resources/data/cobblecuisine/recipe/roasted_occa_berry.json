@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredient": {
+    "item": "cobblemon:occa_berry"
+  },
+  "result": {
+    "id": "cobblecuisine:roasted_occa_berry"
+  },
+  "experience": 40,
+  "cookingtime": 100
+}

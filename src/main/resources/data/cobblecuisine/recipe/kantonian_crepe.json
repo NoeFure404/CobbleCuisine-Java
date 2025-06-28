@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cobblemon:strawberry_sweet"
+    },
+    {
+      "item": "cobblemon:whipped_dream"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:kantonian_crepe",
+    "count": 1
+  }
+}

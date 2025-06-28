@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "cobblemon:bitter_30"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "cobblemon:heal_powder"
+    },
+    {
+      "item": "cobblecuisine:yellow_bean"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:bitter_malasada",
+    "count": 1
+  }
+}

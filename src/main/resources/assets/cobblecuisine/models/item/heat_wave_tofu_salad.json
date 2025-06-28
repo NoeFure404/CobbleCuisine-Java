@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblecuisine:item/heat_wave_tofu_salad"
+  }
+}

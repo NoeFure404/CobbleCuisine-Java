@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "cobblecuisine:beans"
+    },
+    {
+      "tag": "cobblecuisine:beans"
+    },
+    {
+      "tag": "cobblemon:bitter_30"
+    },
+    {
+      "item": "cobblemon:exp_candy_s"
+    },
+    {
+      "item": "cobblemon:exp_candy_m"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:protein_smoothie",
+    "count": 1
+  }
+}

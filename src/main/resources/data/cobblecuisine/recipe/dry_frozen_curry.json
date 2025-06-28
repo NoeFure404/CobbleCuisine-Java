@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "cobblecuisine",
+    "category": "misc",
+    "ingredients": [
+      { "item": "cobblemon:yache_berry" },
+    { "item": "cobblemon:never_melt_ice" },
+    { "item": "minecraft:calcite" },
+    { "item": "minecraft:pumpkin_pie" },
+    { "tag": "cobblemon:dry_20" }
+    ],
+    "result": {
+      "id": "cobblecuisine:dry_frozen_curry",
+      "count": 1
+    }
+  }

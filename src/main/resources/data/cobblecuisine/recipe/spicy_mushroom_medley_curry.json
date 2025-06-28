@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "cobblecuisine",
+    "category": "misc",
+    "ingredients": [
+      {
+        "item": "minecraft:mushroom_stew"
+      },
+      {
+        "item": "cobblemon:payapa_berry"
+      },
+      {
+        "item": "cobblemon:galarica_nuts"
+      },
+      {
+        "tag": "cobblemon:spicy_15"
+      }
+    ],
+    "result": {
+      "id": "cobblecuisine:spicy_mushroom_medley_curry",
+      "count": 1
+    }
+  }

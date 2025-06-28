@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cobblemon:galarica_nuts"
+    },
+    {
+      "item": "cobblecuisine:salad_mix"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    },
+    {
+      "tag": "cobblemon:dry_40"
+    },
+    {
+      "item": "cobblecuisine:orange_bean"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:dry_smoked_tail_curry",
+    "count": 1
+  }
+}

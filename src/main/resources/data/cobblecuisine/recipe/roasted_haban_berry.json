@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredient": {
+    "item": "cobblemon:haban_berry"
+  },
+  "result": {
+    "id": "cobblecuisine:roasted_haban_berry"
+  },
+  "experience": 40,
+  "cookingtime": 100
+}

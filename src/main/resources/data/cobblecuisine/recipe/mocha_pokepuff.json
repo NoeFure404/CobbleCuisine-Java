@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "cobblemon:whipped_dream"
+    },
+    {
+      "tag": "cobblemon:bitter_20"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:mocha_pokepuff",
+    "count": 1
+  }
+}

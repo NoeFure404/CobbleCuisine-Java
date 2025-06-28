@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:yellow_bean"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "tag": "cobblemon:bitter_10"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:coffee",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "cobblemon:sweet_10"
+    },
+    {
+      "item": "minecraft:milk_bucket"
+    },
+    {
+      "item": "cobblecuisine:orange_bean"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:miltank_mix_au_lait",
+    "count": 1
+  }
+}

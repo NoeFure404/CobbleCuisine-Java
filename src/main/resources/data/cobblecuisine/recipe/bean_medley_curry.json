@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:red_bean"
+    },
+    {
+      "item": "cobblecuisine:yellow_bean"
+    },
+    {
+      "item": "cobblecuisine:blue_bean"
+    },
+    {
+      "item": "cobblecuisine:green_bean"
+    },
+    {
+      "item": "cobblecuisine:orange_bean"
+    },
+    {
+      "item": "cobblecuisine:salad_mix"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    },
+    {
+      "item": "cobblemon:galarica_nuts"
+    }
+  ],
+  "result": {
+    "id": "cobblecuisine:bean_medley_curry",
+    "count": 1
+  }
+}

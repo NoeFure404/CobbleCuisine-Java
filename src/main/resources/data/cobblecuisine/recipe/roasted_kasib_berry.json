@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "group": "cobblecuisine",
+  "category": "misc",
+  "ingredient": {
+    "item": "cobblemon:kasib_berry"
+  },
+  "result": {
+    "id": "cobblecuisine:roasted_kasib_berry"
+  },
+  "experience": 40,
+  "cookingtime": 100
+}

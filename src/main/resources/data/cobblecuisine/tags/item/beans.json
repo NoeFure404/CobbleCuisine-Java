@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "cobblecuisine:red_bean",
+    "cobblecuisine:green_bean",
+    "cobblecuisine:yellow_bean",
+    "cobblecuisine:blue_bean",
+    "cobblecuisine:orange_bean"
+  ]
+}

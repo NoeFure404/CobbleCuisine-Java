@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblecuisine:item/defiant_coffee_dressed_salad"
+  }
+}
