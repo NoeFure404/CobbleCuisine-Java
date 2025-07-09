@@ -12,7 +12,7 @@
             "item": "cobblecuisine:roasted_colbur_berry"
         },
         "z": {
-            "tag": "cobblemon:cooked_meat"
+            "item": "minecraft:ender_pearl"
         }
     },
     "pattern": [

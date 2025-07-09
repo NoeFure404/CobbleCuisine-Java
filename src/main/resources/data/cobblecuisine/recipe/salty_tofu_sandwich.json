@@ -6,7 +6,7 @@
             "item": "minecraft:bread"
         },
         "x": {
-            "tag": "cobblecuisine:beans"
+            "item": "minecraft:calcite"
         },
         "y": {
             "item": "cobblecuisine:roasted_passho_berry"

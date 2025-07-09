@@ -16,6 +16,9 @@
         },
         {
             "item": "minecraft:sugar"
+        },
+        {
+            "item": "cobblemon:spice_mix"
         }
     ],
     "result": {

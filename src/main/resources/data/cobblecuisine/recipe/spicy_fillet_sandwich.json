@@ -12,7 +12,7 @@
             "item": "cobblecuisine:roasted_kebia_berry"
         },
         "z": {
-            "tag": "minecraft:fishes"
+            "item": "minecraft:pufferfish"
         }
     },
     "pattern": [

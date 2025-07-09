@@ -12,7 +12,7 @@
             "item": "cobblecuisine:roasted_babiri_berry"
         },
         "z": {
-            "tag": "minecraft:vegetables"
+            "item": "minecraft:iron_nugget"
         }
     },
     "pattern": [
