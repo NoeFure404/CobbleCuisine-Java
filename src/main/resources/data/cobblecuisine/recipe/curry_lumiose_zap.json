@@ -3,27 +3,21 @@
   "group": "cobblecuisine",
   "ingredients": [
     {
-      "item": "cobblecuisine:yellow_bean"
+      "item": "cobblecuisine:bean_yellow"
     },
     {
-      "item": "cobblemon:wacan_berry"
+      "tag": "cobblecuisine:berry_yellow"
     },
     {
-      "tag": "cobblemon:sour_10"
+      "item": "minecraft:raw_copper"
     },
     {
-      "item": "cobblemon:sitrus_berry"
-    },
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "item": "cobblemon:spice_mix"
+      "item": "cobblecuisine:spice_mix"
     }
   ],
   "result": {
     "count": 1,
-    "id": "cobblecuisine:zing_zap_curry"
+    "id": "cobblecuisine:curry_electric"
   },
   "type": "minecraft:crafting_shapeless"
 }
