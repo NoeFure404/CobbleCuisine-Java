@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:bean_green"
+    },
+    {
+      "tag": "cobblecuisine:berry_green"
+    },
+    {
+      "tag": "minecraft:chicken_food"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:curry_grass"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

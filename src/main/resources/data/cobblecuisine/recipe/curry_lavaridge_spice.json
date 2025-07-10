@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:bean_red"
+    },
+    {
+      "tag": "cobblecuisine:berry_red"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:curry_fire"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:bean_green"
+    },
+    {
+      "tag": "cobblecuisine:berry_green"
+    },
+    {
+      "tag": "minecraft:flowers"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:curry_bug"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:bean_orange"
+    },
+    {
+      "tag": "cobblecuisine:berry_yellow"
+    },
+    {
+      "item": "minecraft:brick"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:curry_rock"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

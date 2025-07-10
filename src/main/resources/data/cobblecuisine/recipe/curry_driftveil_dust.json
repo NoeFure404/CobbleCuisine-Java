@@ -1,0 +1,23 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:bean_yellow"
+    },
+    {
+      "tag": "cobblemon:berry_yellow"
+    },
+    {
+      "item": "minecraft:flint"
+    },
+    {
+      "item": "cobblecuisine:spice_mix"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:curry_ground"
+  },
+  "type": "minecraft:crafting_shapeless"
+}
