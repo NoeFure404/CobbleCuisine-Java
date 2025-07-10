@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cobblecuisine:item/spicy_mushroom_medley_curry"
+    "layer0": "cobblecuisine:item/bean_blue"
   }
 }

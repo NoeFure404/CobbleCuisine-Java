@@ -58,12 +58,14 @@ public class CobbleCuisine implements ModInitializer {
 		PlayerSpawnerFactory.INSTANCE.getInfluenceBuilders().add(DubiousInfluence::new);
 		PlayerSpawnerFactory.INSTANCE.getInfluenceBuilders().add(HiddenAbilityInfluence::new);
 
-		// COMPOSTING (?)
+		// BEAN COMPOSTING (?)
 		CompostingChanceRegistry.INSTANCE.add(BeanType.YELLOW.item, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(BeanType.RED.item, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(BeanType.BLUE.item, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(BeanType.ORANGE.item, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(BeanType.GREEN.item, 0.5f);
+		CompostingChanceRegistry.INSTANCE.add(BeanType.PINK.item, 0.5f);
+		CompostingChanceRegistry.INSTANCE.add(BeanType.PURPLE.item, 0.5f);
 		CompostingChanceRegistry.INSTANCE.add(CobbleCuisineItems.BEAN_SEEDS, 0.25f);
 
 		// INIT PRNG

@@ -66,11 +66,11 @@ public class CobbleCuisineLootInjector {
 				addDrop(table, BeanType.ORANGE.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
 			}
 			if (LOOT_TABLES[i] == LootTables.VILLAGE_TAIGA_HOUSE_CHEST) {
-				addDrop(table, BeanType.VIOLET.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
+				addDrop(table, BeanType.PINK.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
 				addDrop(table, BeanType.GREEN.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
 			}
 			if (LOOT_TABLES[i] == LootTables.VILLAGE_SNOWY_HOUSE_CHEST) {
-				addDrop(table, BeanType.INDIGO.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
+				addDrop(table, BeanType.PURPLE.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
 				addDrop(table, BeanType.BLUE.item, CobbleCuisineConfig.data.dropRates.beanDropRate, 2, 5);
 			}
 		}

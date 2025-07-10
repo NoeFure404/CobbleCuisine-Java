@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cobblecuisine:item/indigo_bean"
+	"layer0": "cobblecuisine:item/curry_rock"
   }
 }

@@ -13,24 +13,24 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public enum CurryType {
-	SWEET_APPLE("sweet_apple_curry", effect(CobbleCuisineEffects.DRAGON.entry)),
-	SWEET_WHIPPED_CREAM("sweet_whipped_cream_curry", effect(CobbleCuisineEffects.FAIRY.entry)),
-	BITTER_HERB_MEDLEY("bitter_herb_medley_curry", effect(CobbleCuisineEffects.POISON.entry)),
-	BITTER_LEEK("bitter_leek_curry", effect(CobbleCuisineEffects.WATER.entry)),
-	DRY("dry_curry", effect(CobbleCuisineEffects.FIGHTING.entry)),
-	DRY_FROZEN("dry_frozen_curry", effect(CobbleCuisineEffects.ICE.entry)),
-	DRY_SMOKED_TAIL("dry_smoked_tail_curry", effect(CobbleCuisineEffects.PSYCHIC.entry)),
-	SPICY_POTATO("spicy_potato_curry", effect(CobbleCuisineEffects.STEEL.entry)),
-	DRY_BONE("dry_bone_curry", effect(CobbleCuisineEffects.GROUND.entry)),
-	DROUGHT_KATSU("drought_katsu_curry", effect(CobbleCuisineEffects.FIRE.entry)),
-	DREAM_EATER_BUTTER("dream_eater_butter_curry", effect(CobbleCuisineEffects.GHOST.entry)),
-	NINJA("ninja_curry", effect(CobbleCuisineEffects.DARK.entry)),
-	MILD_HONEY("mild_honey_curry", effect(CobbleCuisineEffects.BUG.entry)),
-	BEAN_MEDLEY("bean_medley_curry", effect(CobbleCuisineEffects.FLYING.entry)),
-	SPICY_MUSHROOM_MEDLEY("spicy_mushroom_medley_curry", effect(CobbleCuisineEffects.GRASS.entry)),
-	SALTY_BOILED_EGG("salty_boiled_egg_curry", effect(CobbleCuisineEffects.NORMAL.entry)),
-	ZING_ZAP("zing_zap_curry", effect(CobbleCuisineEffects.ELECTRIC.entry)),
-	BEANBURGER("beanburger_curry", effect(CobbleCuisineEffects.ROCK.entry));
+	DRAGON("curry_dragon", effect(CobbleCuisineEffects.DRAGON.entry)),
+	FAIRY("curry_fairy", effect(CobbleCuisineEffects.FAIRY.entry)),
+	POISON("curry_poison", effect(CobbleCuisineEffects.POISON.entry)),
+	WATER("curry_water", effect(CobbleCuisineEffects.WATER.entry)),
+	FIGHTING("curry_fighting", effect(CobbleCuisineEffects.FIGHTING.entry)),
+	ICE("curry_ice", effect(CobbleCuisineEffects.ICE.entry)),
+	PSYCHIC("curry_psychic", effect(CobbleCuisineEffects.PSYCHIC.entry)),
+	STEEL("curry_steel", effect(CobbleCuisineEffects.STEEL.entry)),
+	GROUND("curry_ground", effect(CobbleCuisineEffects.GROUND.entry)),
+	FIRE("curry_fire", effect(CobbleCuisineEffects.FIRE.entry)),
+	GHOST("curry_ghost", effect(CobbleCuisineEffects.GHOST.entry)),
+	DARK("curry_dark", effect(CobbleCuisineEffects.DARK.entry)),
+	BUG("curry_bug", effect(CobbleCuisineEffects.BUG.entry)),
+	FLYING("curry_flying", effect(CobbleCuisineEffects.FLYING.entry)),
+	GRASS("curry_grass", effect(CobbleCuisineEffects.GRASS.entry)),
+	NORMAL("curry_normal", effect(CobbleCuisineEffects.NORMAL.entry)),
+	ELECTRIC("curry_electric", effect(CobbleCuisineEffects.ELECTRIC.entry)),
+	ROCK("curry_rock", effect(CobbleCuisineEffects.ROCK.entry));
 
 	public final String id;
 	public final Item item;

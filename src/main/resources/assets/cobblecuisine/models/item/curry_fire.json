@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cobblecuisine:item/ninja_curry"
+	"layer0": "cobblecuisine:item/curry_fire"
   }
 }

@@ -1,16 +1,6 @@
 {
-
-
   "parent": "minecraft:item/generated",
-
-
   "textures": {
-
-
-    "layer0": "cobblecuisine:item/dry_bone_curry"
-
-
+    "layer0": "cobblecuisine:item/bean_green"
   }
-
-
 }

@@ -12,13 +12,13 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public enum BeanType {
-	RED("red_bean", effect(StatusEffects.REGENERATION)),
-	BLUE("blue_bean", effect(StatusEffects.REGENERATION)),
-	ORANGE("orange_bean", effect(StatusEffects.REGENERATION)),
-	GREEN("green_bean", effect(StatusEffects.REGENERATION)),
-	YELLOW("yellow_bean", effect(StatusEffects.REGENERATION)),
-	VIOLET("violet_bean", effect(StatusEffects.REGENERATION)),
-	INDIGO("indigo_bean", effect(StatusEffects.REGENERATION));
+	RED("bean_red", effect(StatusEffects.REGENERATION)),
+	BLUE("bean_blue", effect(StatusEffects.REGENERATION)),
+	ORANGE("bean_orange", effect(StatusEffects.REGENERATION)),
+	GREEN("bean_green", effect(StatusEffects.REGENERATION)),
+	YELLOW("bean_yellow", effect(StatusEffects.REGENERATION)),
+	PURPLE("bean_purple", effect(StatusEffects.REGENERATION)),
+	PINK("bean_pink", effect(StatusEffects.REGENERATION));
 
 
 

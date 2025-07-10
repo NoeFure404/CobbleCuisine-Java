@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "cobblecuisine:item/salty_boiled_egg_curry"
+	"layer0": "cobblecuisine:item/curry_ground"
   }
 }
