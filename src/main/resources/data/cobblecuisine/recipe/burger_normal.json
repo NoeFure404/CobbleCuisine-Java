@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_red"
+    },
+    {
+      "item": "minecraft:baked_potato"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_normal"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

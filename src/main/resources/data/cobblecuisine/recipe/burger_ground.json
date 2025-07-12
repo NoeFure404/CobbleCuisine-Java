@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_yellow"
+    },
+    {
+      "item": "minecraft:flint"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_ground"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

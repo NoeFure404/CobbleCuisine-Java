@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_blue"
+    },
+    {
+      "item": "minecraft:snowball"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_ice"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

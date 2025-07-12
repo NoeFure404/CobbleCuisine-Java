@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_green"
+    },
+    {
+      "tag": "minecraft:flowers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_bug"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

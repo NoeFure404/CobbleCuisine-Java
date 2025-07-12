@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_purple"
+    },
+    {
+      "item": "minecraft:amethyst_shard"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_ghost"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

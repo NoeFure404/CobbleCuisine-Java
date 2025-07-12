@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_red"
+    },
+    {
+      "item": "minecraft:leather"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_fighting"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

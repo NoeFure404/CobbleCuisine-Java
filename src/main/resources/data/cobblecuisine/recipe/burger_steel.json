@@ -1,0 +1,20 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "cobblecuisine:sandwich_bun"
+    },
+    {
+      "tag": "cobblecuisine:berry_purple"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:burger_steel"
+  },
+  "type": "minecraft:crafting_shapeless"
+}

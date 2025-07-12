@@ -1,0 +1,17 @@
+{
+  "category": "misc",
+  "group": "cobblecuisine",
+  "ingredients": [
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "tag": "minecraft:chicken_food"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobblecuisine:sandwich_bun"
+  },
+  "type": "minecraft:crafting_shapeless"
+}
